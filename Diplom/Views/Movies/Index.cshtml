@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Diplom.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="filmIndex">
+     <section class="filmSection">
+        @foreach (var movie in Model) {
+            <div>
+                <a asp-action="Details" asp-controller="Movies" asp-route-id="@movie.Id"> 
+                    <img src="@Url.Content(movie.MovieImg)" alt="movieImg" class="filmPicture">
+                    <p>@movie.Title</p>
+                </a>
+            </div>
+         }
+    </section>
+</div>
+

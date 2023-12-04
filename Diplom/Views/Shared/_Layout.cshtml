@@ -1,0 +1,78 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/Layout.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/Login.css" rel="stylesheet" />
+    <link href="/css/Register.css" rel="stylesheet" />
+    <link href="/css/singlFilm.css" rel="stylesheet" />
+    <link href="/css/RoleIndex.css" rel="stylesheet" />
+    <link href="/css/UserPage.css" rel="stylesheet" />
+    <link href="/css/UserList.css" rel="stylesheet" />
+    <link href="/css/Edit.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap"
+          rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="/img/header logo.svg" alt="logo" /></div>
+        <div class="userButtons">
+            <ul>
+                <li>
+                    <div class="serchButton">
+                        <form method="get" asp-controller="Movies" asp-action="Serch">
+                            <input  type="text" placeholder="Search..." name="Title">
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+                </li>
+                <li class="profileButton">
+                    <a asp-action="Index" asp-controller="Account" class="profile">
+                        <img src="/img/user.svg" alt="user" />
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li><a asp-action="Index" asp-controller="Movies">фильмы</a></li>
+        </ul>
+    </nav>
+    <main style="min-height: 620px;">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <ul class="conditions">
+            <li><a href="">пользовательское соглашение</a></li>
+            <li><a href="">условия пользования</a></li>
+            <li><a href="">о нас</a></li>
+        </ul>
+        <ul class="socialNetworks">
+            <li>
+                <a href=""><img src="/img/youtube (2).svg" alt="youtube" /></a>
+            </li>
+            <li>
+                <a href=""><img src="/img/instagram (3).svg" alt="instagram" /></a>
+            </li>
+            <li>
+                <a href=""><img src="/img/facebook (3).svg" alt="facebook" /></a>
+            </li>
+            <li>
+                <a href=""><img src="/img/twitter (1).svg" alt="twitter" /></a>
+            </li>
+        </ul>
+        <ul class="infoAboutAuthor">
+            <li><p>hrybanau films contacts</p></li>
+            <li>
+                <a href="mailto:hrybanaufilms@gmail.com">hrybanaufilms@gmail.com</a>
+            </li>
+            <li><a href="tel:+777777777">+777(77)7777777</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

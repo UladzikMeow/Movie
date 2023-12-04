@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Diplom.Models.User>
+
+<div class="main3">
+    <p class="list-user-p">USER LIST</p>
+    <table>
+        <thead>
+            <tr>
+                <td>LOGIN</td>
+                <td rowspan="2">E-MAIL ADRESS</td>
+                <td>ACCESS LEVEL</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" asp-action="EditRole" asp-route-userid="@user.Id">ACCESS LEVEL</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

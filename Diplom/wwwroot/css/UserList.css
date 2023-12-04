@@ -1,0 +1,29 @@
+﻿.main3 > .list-user-p {
+    color: #262626;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 10px;
+}
+
+.main3 > table {
+    width: 500px;
+    height: 200px;
+    margin: 10px 10px;
+    padding: 20px 10px;
+    border: 1px solid #262626;
+}
+
+    .main3 > table > thead {
+        color: #262626;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .main3 > table > tbody {
+        color: rgb(100, 100, 100);
+        font-size: 1rem;
+    }
+
+        main > table > tbody > tr > td > a {
+            color: rgb(0, 110, 255);
+        }

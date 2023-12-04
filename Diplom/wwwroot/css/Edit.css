@@ -1,0 +1,56 @@
+﻿.main4 > .changes-user-p {
+    width: 400px;
+    color: #262626;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+    .main4 > .changes-user-p > span {
+        font-weight: bold;
+        color: #808080;
+    }
+
+.main4 > .container {
+    margin: 10px 10px;
+}
+
+.main-container6 {
+    width: 400px;
+}
+
+.container > .block-role-ch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .container > .block-role-ch input {
+        margin: 0 10px;
+        outline: none;
+    }
+
+    .container > .block-role-ch p {
+        color: #262626;
+        padding: 0 10px;
+    }
+
+.main4 > .main-container6 > button {
+    margin-left: 120px;
+    width: 180px;
+    padding: 7px 10px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 110, 255);
+    border: 1px solid rgb(0, 110, 255);
+    box-sizing: border-box;
+}
+
+    .main4 > .main-container6 > button:active {
+        background-color: rgb(0, 99, 228);
+        border: 1px solid rgb(0, 99, 228);
+        box-sizing: border-box;
+    }
+
+

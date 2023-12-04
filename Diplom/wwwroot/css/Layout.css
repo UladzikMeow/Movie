@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  font-family: 'Arimo', sans-serif;
+}
+header {
+  height: 134px;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 32px;
+}
+.userButtons ul {
+  margin: 71px 34px 0px 0px;
+  display: flex;
+}
+.userButtons li {
+  list-style-type: none;
+  margin-right: 17px;
+}
+
+.userButtons li:last-child {
+  margin-right: 0px;
+}
+.userButtons img {
+  width: 32px;
+  height: 32px;
+}
+.navigation {
+  height: 42px;
+  background-color: #131313;
+  padding-top: 11px;
+}
+.navigation ul {
+  margin-left: 38px;
+  display: flex;
+  justify-content: space-around;
+}
+.navigation li {
+  list-style-type: none;
+  margin-right: 135px;
+}
+.navigation li:last-child {
+  margin-right: 0px;
+}
+.navigation li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ffffff;
+}
+.navigation li a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+footer {
+  height: 112px;
+  background-color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer li {
+  list-style-type: none;
+}
+footer li a {
+  text-decoration: none;
+}
+
+.conditions {
+  margin-left: 38px;
+}
+
+.conditions a {
+  font-size: 18px;
+  color: #6a6a6a;
+  text-transform: uppercase;
+}
+
+.socialNetworks {
+  display: flex;
+}
+.socialNetworks li {
+  margin-right: 134px;
+}
+.socialNetworks li:last-child {
+  margin-right: 0px;
+}
+.infoAboutAuthor {
+  text-align: right;
+  margin-right: 34px;
+}
+.infoAboutAuthor p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #6a6a6a;
+}
+.infoAboutAuthor a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #6a6a6a;
+}
+
+
+.serchButton > form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background-color: rgb(19, 19, 19);
+    position: relative;
+}
+
+    .serchButton > form > input {
+        width: 0px;
+        padding: 10px 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        border-bottom: 2px solid transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+        transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+    }
+
+        .serchButton > form > input:focus {
+            z-index: 1;
+            width: 250px;
+            border-bottom: 2px solid #ffffff;
+        }
+
+    .serchButton > form > button {
+        background-color: #262626;
+        border: none;
+        outline: none;
+        height: 36px;
+        width: 36px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+        .serchButton > form > button:before {
+            content: url("/img/search.svg");
+            border: none;
+            outline: none;
+        }
+.custom-button {
+    margin-top: 20px;
+    padding: 7px 10px;
+    outline: none;
+    border: 1px solid white;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    custom-button font-weight: bold;
+    color: white;
+    background: rgb(0, 132, 255);
+}
+
+    .custom-button:active {
+        background: rgb(233, 233, 233);
+    }
+    .custom-button:disabled {
+        background:rgb(128, 128, 128);
+    }

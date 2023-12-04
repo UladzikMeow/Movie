@@ -1,0 +1,121 @@
+﻿.main-container2 {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+}
+
+.block-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .block-image > p {
+        margin: 10px 0px;
+        font-size: 1.6rem;
+        color: #262626;
+    }
+
+        .block-image > p > span {
+            color: #262626;
+        }
+
+.block-title {
+    padding: 0px 15px;
+    color: #262626;
+}
+
+    .block-title > p > span {
+        font-weight: bold;
+        color: #262626;
+    }
+
+    .block-title > p {
+        color: #262626;
+    }
+
+        .block-title > p > a {
+            color: #262626;
+        }
+
+        .block-title > p:nth-child(4) {
+            width: 850px;
+            line-height: 20px;
+        }
+
+.review-title {
+    max-width: 1920px;
+    color: #262626;
+}
+
+    .review-title > p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 1px solid #262626;
+    }
+
+.review-out-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #262626;
+}
+
+    .review-out-container > p:nth-child(1) {
+        font-weight: bold;
+        color: #262626;
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+
+    .review-out-container > p:nth-child(2) {
+        width: 1200px;
+        color: rgb(202, 202, 202);
+    }
+
+.review-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .review-container > p {
+        margin: 10px 0px;
+        width: 120px;
+        font-size: 1.5rem;
+        color: #262626;
+        font-weight: bold;
+    }
+
+        .review-container > p:hover {
+            color: rgb(0, 110, 255);
+            cursor: pointer;
+        }
+
+    .review-container > textarea {
+        resize: none;
+        width: 600px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgb(0, 110, 255);
+        background: white;
+        padding: 10px;
+    }
+
+    .review-container > button {
+        width: 200px;
+        margin: 10px 0px;
+        padding: 10px 5px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(0, 110, 255);
+        border: 1px solid rgb(0, 110, 255);
+        box-sizing: border-box;
+    }
+
+        .review-container > button:hover {
+            background-color: rgb(0, 94, 216);
+            border: 1px solid rgb(0, 94, 216);
+        }

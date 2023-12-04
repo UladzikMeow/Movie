@@ -1,0 +1,100 @@
+﻿@model Diplom.ViewModel.MovieDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="main-container2">
+    <div>
+        <div class="block-image">
+        <img src="@Url.Content(Model.Movie.MovieImg)" alt="filmsImg">
+@*        <p>9.5 из 10 <span>&#9733</span></p>*@
+        </div>
+        @if(User.Identity.IsAuthenticated)
+        {
+     
+            <form method="post" asp-action="addToViewList">
+                <input type="hidden" name="movieId" value="@Model.Movie.Id">
+                <input type="hidden" name="userName" value="@User.Identity.Name">
+                @if(Model.isAddedInViewList)
+                {
+                    string value;  
+                    value = "Просмотренно";
+                    <button type="submit" disabled class="custom-button">
+                        @value
+                    </button>
+                }
+                else
+                {
+                    string value;
+                    value = "Добавить в просмотренное";
+                    <button type="submit" class="custom-button">
+                        @value
+                    </button>
+                }
+            </form>
+        }
+    </div>
+    
+    <div class="block-title">
+        <p><span>Название: </span>@Model.Movie.Title</p>
+        <p>
+            <span>Актёры: </span>
+            @foreach (Actor actor in Model.Movie.Actors)
+            {
+                <a>@actor.Name </a>
+            }
+        </p>
+        <p>
+            <span>Жанры: </span>
+            @foreach (Genre genre in Model.Movie.Genres)
+            {
+                <a>
+                    @genre.Gener 
+                </a>
+            }
+        </p>
+        <p><span>Описание: </span> <br> @Model.Movie.Description</p>
+    </div>
+</div>
+
+
+<div class="review-title">
+    <p>Отзывы по фильму</p>
+</div>
+
+@if (Model.Movie.Reviews.Count > 0)
+{
+    foreach (Review review in Model.Movie.Reviews)
+    {
+        <div class="review-out-container">
+            <p>@review.User.UserName</p>
+            <p>@review.ReviewText</p>   
+            <p>@review.rating</p>
+        </div>
+    }
+}
+else
+{
+    <p>Отзывов нет</p>
+}
+
+   
+@if (User.Identity.IsAuthenticated)
+{
+    <form method="post" asp-action="Details">
+    <div class="review-container">
+        <input type="hidden" name="userName" value="@User.Identity.Name" />
+        <input type="hidden" name="movieId" value="@Model.Movie.Id" />
+        <select name="postRating">
+            @for(int i = 1; i<11; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+        <p>@User.Identity.Name</p>
+        <textarea name="textReview" id="textReview" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+        <button type="submit">ОТПРАВИТЬ</button>
+    </div>
+    </form>
+}

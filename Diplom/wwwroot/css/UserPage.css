@@ -1,0 +1,141 @@
+﻿.main > .lk-p {
+    margin: 15px 10px;
+    color: #262626;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.main > .lk-nav {
+    margin: 5px 5px;
+}
+
+    .main > .lk-nav > a {
+        padding: 10px 10px;
+        margin: 0px 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0, 110, 255);
+        outline: none;
+    }
+
+        main > .lk-nav > a:active {
+            background-color: rgb(0, 98, 226);
+        }
+
+.main-container4 {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 10px;
+}
+
+.block-image-lk {
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .block-image-lk > img {
+        width: 256px;
+        height: 256px;
+    }
+
+    .block-image-lk button {
+        width: 200px;
+        padding: 10px 5px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(0, 110, 255);
+        border: 1px solid rgb(0, 110, 255);
+        box-sizing: border-box;
+        margin: 15px auto;
+    }
+
+        .block-image-lk button:nth-child(3) {
+            margin: 0 auto;
+        }
+
+        .block-image-lk button:active {
+            background-color: rgb(0, 97, 224);
+        }
+
+.block-title-lk {
+    padding: 10px 10px;
+}
+
+    .block-title-lk > p:nth-child(1) {
+        margin: 0;
+        color: #262626;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .block-title-lk > p {
+        font-style: italic;
+        color: rgb(100, 100, 100);
+    }
+
+        .block-title-lk > p > span {
+            font-style: normal;
+            color: #262626;
+            font-weight: bold;
+        }
+
+        .block-title-lk > p > a {
+            color: rgb(0, 110, 255);
+        }
+
+
+
+
+
+
+.main2 > .role-p {
+    margin: 5px 10px;
+    color: #262626;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.main-container5 {
+    margin: 0 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-list-add-role {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container5 button {
+    margin: 20px auto;
+    width: 200px;
+    padding: 7px 0px;
+    color: white;
+    font-weight: bold;
+    background: rgb(0, 110, 255);
+    border: 1px solid rgb(0, 110, 255);
+    box-sizing: border-box;
+}
+
+    .main-container5 button:active {
+        background: rgb(0, 91, 209);
+    }
+
+.block-list-add-role label {
+    color: rgb(100, 100, 100);
+    padding: 7px 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.block-list-add-role input {
+    padding: 7px 5px;
+    border: 2px solid #262626;
+    outline: none;
+}

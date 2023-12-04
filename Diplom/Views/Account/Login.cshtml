@@ -1,0 +1,21 @@
+﻿@model Diplom.ViewModel.LoginViewModel
+@{
+    ViewBag.Title = "Авторизация";
+}
+<div class="main-container">
+    <div class="login">
+        <form method="post" asp-controller="Account" asp-action="Login"
+                asp-route-returnUrl="@Model.ReturnUrl">
+            <div asp-validation-summary="ModelOnly"></div>
+            <p>Вход</p>
+            <label asp-for="UserName">Имя пользователя</label>
+            <input asp-for="UserName" />
+
+            <label asp-for="Password">Пароль</label>
+            <input asp-for="Password" />
+
+            <button type="submit">Войти</button>
+            <button asp-controller="Account" asp-action="Register">Зарегистрироваться</button>
+        </form>
+    </div>
+</div>

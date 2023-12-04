@@ -1,0 +1,22 @@
+﻿@model Diplom.ViewModel.RegisterViewModel
+<div class="main-container">
+    <div class="register">
+        <form method="post" asp-controller="Account" asp-action="Register">
+            <div asp-validation-summary="ModelOnly"></div>
+          <p>Регистрация аккаунта</p>
+            <label asp-for="UserName">Имя пользователя</label>
+            <input asp-for="UserName" />
+          
+            <label asp-for="Password">Пароль</label>
+            <input asp-for="Password" />
+           
+            <label  asp-for="PasswordConfirm">Подтвердите пороль</label>
+            <input  asp-for="PasswordConfirm" />
+
+            <label asp-for="Email">E-MAIL</label>
+            <input asp-for="Email" />
+
+            <button type="submit" value="Регистрация">Зарегестрироваться</button>
+            <button asp-controller="Account" asp-action="Login">Войти</button>
+        </form>
+</div>

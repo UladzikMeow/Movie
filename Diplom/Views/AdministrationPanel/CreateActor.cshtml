@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Diplom.Models.Movie>
+
+<form asp-action="CreateActor" enctype="multipart/form-data" method="post">
+    <div>
+        <label>Введите имя и фамилию актера</label>
+        <input type="text" name="Name"/>
+    </div>
+    <div>
+        <label>Выберите фильмы в которых он снимался</label>
+        @foreach (var item in Model)
+        {
+            <p><input type="checkbox" name="Movies" value="@item.Id" id="@item.Id"/> @item.Title</p>
+        }
+    </div>
+    <div>
+        <input type="submit" value="Отправить"/>
+    </div>
+</form>

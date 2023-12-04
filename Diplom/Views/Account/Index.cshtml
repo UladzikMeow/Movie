@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Diplom.Models.User>
+@{
+    ViewBag.Title = "Личный кабинет";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+
+    @foreach (var user in Model)
+    {
+        if (user.UserName == User.Identity.Name)
+        {
+            <div class="main">
+                <p class="lk-p">Личная кабинет</p>
+                <nav class="lk-nav">
+                    <a asp-action="ViewList" asp-route-id="@user.Id">Просмотренные</a>
+                </nav>
+                <div class="main-container4">
+                    <div class="block-image-lk">
+                        <img src="/img/userPic.svg" alt="">
+                        <button type="submit">НАСТРОЙКИ</button>
+                        <form method="post" asp-controller="Account" asp-action="Logout" style="margin: 0 auto">
+                            <button type="submit">ВЫХОД</button>
+                        </form>
+                    </div>
+                    <div class="block-title-lk">
+                        <p>Личная информация</p>
+                        <p><span>LOGIN: </span>@user.UserName</p>
+                        <p><span>E-MAIL: </span>@user.Email</p>
+                        <p><a class="btn btn-sm btn-primary" asp-action="ChangePassword" asp-route-id="@user.Id">Сменить пароль</a></p>
+                        @if (User.IsInRole("admin")){
+                            <p><a class="btn btn-sm btn-primary" asp-controller="AdministrationPanel" asp-action="Index">Панель администратора</a></p>
+                            }
+                        
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    width: 100%;
+    font-family: 'Arimo', sans-serif;
+    height: 100%;
+}
+
+.filmIndex {
+  padding: 30px 0px;
+  display: flex;
+}
+.filmSection {
+    margin: 0 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+}
+    .filmSection a {
+        text-decoration: none;
+    }
+.homeSection {
+    margin: 100px auto;
+    width: 20%;
+}
+
+    .homeSection a {
+        margin: auto;
+        text-decoration: none;
+    }
+.filmPicture {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.asideBar div {
+  margin-right: 32px;
+  float: right;
+  border: 2px solid #2a2a2a;
+  width: 409px;
+  height: 147px;
+  margin-bottom: 31px;
+}
+
+
+
+.a_button {
+    padding: 10px 10px;
+    margin: 0px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 110, 255);
+    outline: none;
+}
+.a_button:active {
+    background-color: rgb(0, 98, 226);
+}
+.admin_panel_div{
+    padding-top:30px;
+}
+
+.table{
+    margin-top:30px;
+}
+
+.checkselect {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    text-align: left;
+}
+
+.checkselect-control {
+    position: relative;
+    padding: 0 !important;
+}
+
+    .checkselect-control select {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding-left: 5px;
+        height: 30px;
+    }
+
+.checkselect-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.checkselect-popup {
+    display: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    border: 1px solid #dadada;
+    border-top: none;
+    background: #fff;
+    z-index: 9999;
+    overflow: auto;
+    user-select: none;
+}
+
+.checkselect label {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 4px 6px 4px 25px;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.1;
+    cursor: pointer;
+}
+
+.checkselect-popup input {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.checkselect-popup label:hover {
+    background: #03a2ff;
+    color: #fff;
+}
+
+.checkselect-popup fieldset {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+    .checkselect-popup fieldset input {
+        left: 15px;
+    }
+
+    .checkselect-popup fieldset label {
+        padding-left: 32px;
+    }
+
+.checkselect-popup legend {
+    display: block;
+    margin: 0;
+    padding: 5px 8px;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.1;
+}

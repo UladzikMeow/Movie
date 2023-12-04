@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model Diplom.ViewModel.ChangeRoleViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="main4">
+    <p class="changes-user-p">CHANGE ACCESS LEVEL FOR USER: <br><span>@Model.UserEmail</span></p>
+
+    <form asp-action="EditRole" method="post" class="main-container6">
+        <input type="hidden" name="userId" value="@Model.UserId" />
+        <div class="container">
+            <div class="block-role-ch">
+                @foreach (IdentityRole role in Model.AllRoles)
+                {
+                    <input type="checkbox" name="roles" value="@role.Name"
+                           @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") /><p>@role.Name</p> <br />
+                    }
+            </div>
+        </div>
+        <button type="submit">SAVE CHANGES</button>
+    </form>
+</div>
